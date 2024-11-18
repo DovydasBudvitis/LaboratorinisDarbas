@@ -3,79 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple HTML Test Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 0;
-            background-color: #f4f4f9;
-        }
-        header {
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        main {
-            background-color: #fff;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-        }
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px 0;
-            background-color: #e9ecef;
-            color: #6c757d;
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>Styled Profile Page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="profile-section">
+            <img src="profile-picture.jpg" alt="Profile Picture" class="profile-picture">
+            <h2>Dovydas Budvitis</h2>
+            <p class="tagline">I'm a student</p>
+            <div class="social-icons">
+                <span>🔗</span>
+                <span>🔗</span>
+                <span>🔗</span>
+                <span>🔗</span>
+            </div>
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li>Home</li>
+                <li>About</li>
+                <li>Resume</li>
+                <li>Portfolio</li>
+                <li>Services</li>
+                <li>Dropdown</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </div>
 
-<header>
-    <h1>Welcome to the Test Page</h1>
-</header>
-
-<main>
-    <h2>About This Page</h2>
-    <p>This is a simple HTML template for testing and demonstration purposes. You can modify this content as needed.</p>
-
-    <h3>Sample List</h3>
-    <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-    </ul>
-
-    <h3>Sample Form</h3>
-    <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name">
-        <br><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email">
-        <br><br>
-        <input type="submit" value="Submit">
-    </form>
-
-    <h3>Links & Buttons</h3>
-    <a href="https://github.com/DovydasBudvitis?tab=repositories">Click Here</a> | 
-    <button onclick="alert('Button clicked!')">Test Button</button>
-</main>
-
-<footer>
-    &copy; 2024 Test Page. All rights reserved.
-</footer>
-
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="hero">
+            <h1>Dovydas Budvitis</h1>
+            <p class="hero-tagline">I'm a student</p>
+        </div>
+    </div>
 </body>
 </html>

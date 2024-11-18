@@ -1,0 +1,109 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', monospace;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    background-color: #111;
+    color: #fff;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+/* Profile Section in Sidebar */
+.profile-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #444;
+    margin-bottom: 10px;
+}
+
+.profile-section h2 {
+    margin: 5px 0;
+    font-size: 18px;
+    color: #fff;
+}
+
+.tagline {
+    font-size: 14px;
+    color: #888;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icons span {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Navigation Menu */
+.nav-list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.nav-list li {
+    padding: 15px 20px;
+    text-align: left;
+    color: #ccc;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-list li:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Main Content Styling */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    background: url('background-image.jpg') center center / cover no-repeat;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero-tagline {
+    font-size: 20px;
+    font-style: italic;
+    color: #ddd;
+}
