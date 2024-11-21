@@ -5,6 +5,7 @@ body, html {
     font-family: 'Courier New', monospace;
 }
 
+
 /* Sidebar Styling */
 .sidebar {
     background-color: #111;
@@ -68,23 +69,22 @@ body, html {
 .nav-list li {
     padding: 15px 20px;
     text-align: left;
-    color: #ccc;
+    color: #ff0000;
     cursor: pointer;
     transition: background 0.3s, color 0.3s;
 }
 
 .nav-list li:hover {
     background-color: #333;
-    color: #fff;
+    color: #04ff00;
 }
 
 /* Main Content Styling */
 .main-content {
     margin-left: 250px;
     padding: 20px;
-    background: url('background-image.jpg') center center / cover no-repeat;
+    background: url('C:\Users\User\Desktop\LaboratorinisDarbas\Photos\1photo.jpg') center center / cover no-repeat;
     height: 100vh;
-    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,3 +107,5 @@ body, html {
     font-style: italic;
     color: #ddd;
 }
+
+
