@@ -108,4 +108,19 @@ body, html {
     color: #ddd;
 }
 
+/* Style the video and audio sections */
+.media-section {
+    margin-top: 20px; /* Add spacing from the header */
+    display: flex; /* Use Flexbox to align items */
+    flex-direction: column; /* Stack the video and audio vertically */
+    align-items: center; /* Center-align video and audio horizontally */
+    gap: 20px; /* Add space between video and audio */
+}
+
+.video-section video, 
+.audio-section audio {
+    border: 2px solid #fff; /* Optional: Add a border */
+    border-radius: 10px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Optional: Add shadow */
+}
 
