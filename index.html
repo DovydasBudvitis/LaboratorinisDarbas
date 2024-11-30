@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Styled Profile Page</title>
     <link rel="stylesheet" href="style.css">
-    <div class="logo">
-        <img src="Photos\happy-man-thumbs-up-sign-full-length-portrait-white-background-showing-31416426.webp   " alt="Logo" width="100" height="100">
-    </div>
 </head>
 <body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <p>Discover my projects, skills, and more.</p>
+    </header>
 
 <button id="theme-toggle" class="theme-toggle">Switch to Light Mode</button>
 <button id="scroll-top" class="scroll-top">↑ Back to Top</button>
@@ -26,20 +27,20 @@
             <p class="tagline">I'm a student</p>
             <p>Hello, my name is Dovydas. I'm a second year student, studying computer engineering at VilniusTech. On my free time I enjoy learning about the futures market and the stock, forex markets. This is my newly found hobby.</p>
             <div class="social-icons">
-                <span>📩</span>
-                <span>ⓕ</span>
-                <span>🌐</span>
+                <span href="https://mail.google.com/mail/u/0/">📩</span>
+                <span href="https://www.facebook.com/">ⓕ</span>
+                <span href="https://www.google.co.uk/">🌐</span>
                 <span>🔗</span>
             </div>
         </div>
         <nav>
             <ul class="nav-list">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Resume</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Resume">Resume</a></li>
+                <li><a href="#Portfolio">Portfolio</a></li>
+                <li><a href="#Services">Services</a></li>
+                <li><a href="#Contacts">Contact</a></li>
             </ul>
         </nav>
     </div>
@@ -47,19 +48,19 @@
     <!-- Main Content Grid -->
     <div class="main-grid">
         <!-- Hero Section -->
-        <div class="hero">
+        <div class="hero" id = "Home">
             <h1>Dovydas Budvitis</h1>
             <p class="hero-tagline">I'm a student</p>
         </div>
 
         <!-- Completed Projects Section -->
-        <section class="Completedprojects">
+        <section class="Completedprojects" id="Portfolio">
             <h2>Completed Projects</h2>
             <p>Construction and other industrial projects (oil and gas, mining etc.) are extremely hard work. Projects can span for many years, and involve thousands of moving pieces and interdependent parts. These projects are already extremely risky for all parties, involving large bets which can be quickly derailed by unexpected delays, quality issues and more.</p>
         </section>
 
         <!-- Services Section -->
-        <section class="Services">
+        <section class="Services" id="Services">
             <h2>Services</h2>
             <p>The exchange of information through texts is controlled by text types, text determination, and copying control settings. Copying control controls the copying of texts from source documents to target documents. SAP provides you with text controls for service contracts.</p>
         </section>
@@ -83,10 +84,30 @@
             <img src="Photos/image2.avif" alt="Description of Photo 2" width="300" height="170">
             <img src="Photos/image3.jpg" alt="Description of Photo 3" width="300" height="170">
         </div>
+
+    <section class="About" id="About">
+        <h2>About</h2>
+        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
+    </section>
+
+    <section class="resume-me-section" id="Resume">
+        <h2>Resume</h2>
+        <p>
+          I am a highly driven Computer Engineer with a passion for Technical stuff and other stuff. 
+          With over 5 years of experience in back end development, I specialize in Programming the back end of the website. 
+          My goal is to leverage my expertise to create meaningful impact and contribute to innovative projects.
+        </p>
+        <ul>
+            <li>Portland par 127, Orlando, FL</li>
+            <li>(123) 456-7891</li>
+            <li>alice.barkley@example.com</li>
+        </ul>
+        <img src="Photos\download.png" alt="Description of Photo 1" width="300" height="170">
+      </section>
     </div>
 
     <footer>
-        <div class="contact-info">
+        <div class="contact-info" id="Contacts">
             <p>Contact me at: <a href="mailto:your-email@example.com">dovydasbud999@gmail.com</a></p>
         </div>
         <div class="social-icons">
@@ -97,7 +118,10 @@
         </div>
     </footer>
 
+
     <script src="script.js"></script>
+
+
 </body>
 </html>
 

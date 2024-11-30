@@ -21,12 +21,12 @@ body.light-mode {
 /* Theme Toggle Button */
 .theme-toggle {
     position: fixed;
-    top: 20px;
+    top: 70px;
     right: 20px;
     z-index: 1000;
     padding: 10px 20px;
-    background-color: #444; /* Dark mode button */
-    color: white;
+    background-color: #ffffff; /* Dark mode button */
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -34,8 +34,8 @@ body.light-mode {
 }
 
 body.light-mode .theme-toggle {
-    background-color: #ddd; /* Light mode button */
-    color: black;
+    background-color: #000000; /* Light mode button */
+    color: rgb(255, 255, 255);
 }
 
 /* Sidebar Styling */
@@ -146,10 +146,10 @@ body {
 /* Main Grid Layout */
 .main-grid {
     display: grid;
-    grid-template-columns: repeat(12, 1fr); /* 12-column layout */
+    grid-template-columns: repeat(12, 2fr); /* 12-column layout */
     grid-gap: 20px;
-    width: calc(100% - 270px); /* Make the grid the same width as the available space, accounting for sidebar */
-    margin-left: 270px; /* Offset to account for sidebar */
+    width: calc(100% - 0px); /* Make the grid the same width as the available space, accounting for sidebar */
+    margin-left: 0px; /* Offset to account for sidebar */
     padding: 20px;
     box-sizing: border-box;
 }
@@ -163,6 +163,12 @@ body {
     border-radius: 10px;
 }
 
+.Services {
+    grid-column: span 6;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
 /* Completed Projects Section */
 .Completedprojects {
     grid-column: span 6; /* Half width */
@@ -171,12 +177,24 @@ body {
     border-radius: 10px;
 }
 
-/* Services Section */
-.Services {
-    grid-column: span 6; /* Half width */
+.resume-me-section {
+    grid-column: span 12; /* Half width */
     background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
     border-radius: 10px;
+    text-wrap: pretty;
+}
+.resume-me-section img {
+    border-radius: 10px;
+}
+
+/* Services Section */
+.About {
+    grid-column: span 12; /* Half width */
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    
 }
 
 /* Media Section */
@@ -267,13 +285,12 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #333;
+    background-color: #444;
     color: white;
+    text-align: center;
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
-header .logo img {
-    border-radius: 50%;
-}
 
 header .header-nav ul {
     display: flex;
