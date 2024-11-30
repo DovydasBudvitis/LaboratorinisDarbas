@@ -1,0 +1,328 @@
+/* Default Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lucida Console", "Courier New", monospace;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode (Default) */
+body.dark-mode {
+    background-color: #121212; /* Dark gray */
+    color: white;
+}
+
+/* Light Mode */
+body.light-mode {
+    background-color: #f5f5f5; /* Light gray */
+    color: black;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    padding: 10px 20px;
+    background-color: #444; /* Dark mode button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode .theme-toggle {
+    background-color: #ddd; /* Light mode button */
+    color: black;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50; /* Professional, dark blue background */
+    color: white; /* White text for contrast */
+    height: 100vh; /* Full screen height */
+    position: fixed; /* Keep it fixed on the left side */
+    left: 0;
+    top: 0;
+    padding-top: 40px; /* Space from the top */
+    padding-left: 20px; /* Padding for inner content */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3); /* Subtle shadow on the right */
+    z-index: 9999; /* Ensure it's above other content */
+    transition: all 0.3s ease; /* Smooth transition for interactions */
+}
+
+/* Profile Section */
+.profile-section {
+    text-align: center; /* Center the profile section */
+    margin-bottom: 30px; /* Spacing below the profile */
+}
+
+.profile-section img {
+    border-radius: 50%; /* Circle the profile picture */
+    width: 80px; /* Fixed size */
+    height: 80px; /* Fixed size */
+    object-fit: cover; /* Ensures the image is not distorted */
+    margin-bottom: 15px; /* Space below image */
+}
+
+.profile-section h2 {
+    font-size: 18px; /* Slightly larger font size */
+    margin: 5px 0;
+    font-weight: 500;
+}
+
+.profile-section .tagline {
+    font-size: 14px;
+    color: #bdc3c7; /* Light gray */
+    margin-bottom: 20px; /* Space below tagline */
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons span {
+    font-size: 18px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.social-icons span:hover {
+    color: #3498db; /* Change color on hover */
+}
+
+/* Navigation List Styling */
+.nav-list {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+}
+
+.nav-list li {
+    padding: 12px 20px; /* Spacing inside list items */
+    margin-bottom: 10px; /* Space between items */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    border-radius: 4px; /* Rounded corners for each item */
+    font-weight: 500; /* Make text bold */
+}
+
+.nav-list li:hover {
+    background-color: #34495e; /* Darker background on hover */
+    color: #ecf0f1; /* Lighter text color on hover */
+}
+
+/* Add space between sections for better readability */
+.nav-list li a {
+    color: inherit; /* Inherit color from the parent */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Adding padding to the body content to avoid overlap with the sidebar */
+body {
+    padding-left: 270px; /* Ensure the content doesn't hide behind the sidebar */
+    transition: padding-left 0.3s ease;
+}
+
+/* On smaller screens (like mobile), we can add responsiveness */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px; /* Smaller sidebar on mobile */
+    }
+
+    .nav-list li {
+        padding: 10px 15px; /* Adjust padding for mobile */
+    }
+
+    body {
+        padding-left: 0; /* Remove left padding on smaller screens */
+    }
+}
+
+/* Main Grid Layout */
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* 12-column layout */
+    grid-gap: 20px;
+    width: calc(100% - 270px); /* Make the grid the same width as the available space, accounting for sidebar */
+    margin-left: 270px; /* Offset to account for sidebar */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Hero Section */
+.hero {
+    grid-column: span 12; /* Full width */
+    text-align: center;
+    background-color: rgba(110, 9, 9, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Completed Projects Section */
+.Completedprojects {
+    grid-column: span 6; /* Half width */
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Services Section */
+.Services {
+    grid-column: span 6; /* Half width */
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Media Section */
+.media-section {
+    grid-column: span 8; /* Two-thirds width */
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Stock Market Section */
+.stock-market {
+    grid-column: span 4; /* One-third width */
+    margin: 20px auto;
+    text-align: center;
+}
+
+.stock-market img {
+    margin: 10px;
+    border-radius: 10px;
+}
+
+/* Responsive Design for Smaller Screens (Tablets and Mobile) */
+@media (max-width: 1024px) {
+    .main-grid {
+        grid-template-columns: repeat(8, 1fr); /* 8-column layout for tablets */
+    }
+
+    .hero {
+        grid-column: span 8; /* Hero takes full width on tablets */
+    }
+
+    .Completedprojects, .Services {
+        grid-column: span 8; /* Full width for sections */
+    }
+
+    .media-section {
+        grid-column: span 8; /* Full width on tablets */
+    }
+
+    .stock-market {
+        grid-column: span 8; /* Full width on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .main-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4-column layout for mobile */
+    }
+
+    .hero {
+        grid-column: span 4; /* Hero section takes full width on mobile */
+    }
+
+    .Completedprojects, .Services {
+        grid-column: span 4; /* Sections stack on mobile */
+    }
+
+    .media-section {
+        grid-column: span 4; /* Media section also stacks */
+    }
+
+    .stock-market {
+        grid-column: span 4; /* Stock market section stacks */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-grid {
+        grid-template-columns: 1fr; /* Single column layout for very small screens */
+    }
+
+    .hero {
+        grid-column: span 1; /* Hero section takes full width on very small screens */
+    }
+
+    .Completedprojects, .Services, .media-section, .stock-market {
+        grid-column: span 1; /* Each section stacks one below the other */
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+header .logo img {
+    border-radius: 50%;
+}
+
+header .header-nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+header .header-nav ul li {
+    margin-left: 20px;
+}
+
+header .header-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header .header-nav ul li a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .contact-info {
+    margin-bottom: 10px;
+}
+
+footer .social-icons span {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.scroll-top:hover {
+    background-color: #555;
+}
