@@ -285,7 +285,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #444;
+    background-color: #333;
     color: white;
     text-align: center;
     font-family: "Lucida Console", "Courier New", monospace;
@@ -342,4 +342,7 @@ footer .social-icons span {
 
 .scroll-top:hover {
     background-color: #555;
+}
+HTML {
+    scroll-behavior: smooth;
 }
