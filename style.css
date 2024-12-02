@@ -6,7 +6,6 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-
 body::-webkit-scrollbar {
     width: 10px; /* Scrollbar width */
 }
@@ -232,7 +231,6 @@ body {
     border-radius: 10px;
 }
 
-/* Responsive Design for Smaller Screens (Tablets and Mobile) */
 @media (max-width: 1024px) {
     .main-grid {
         grid-template-columns: repeat(8, 1fr); /* 8-column layout for tablets */
@@ -292,7 +290,7 @@ body {
 }
 
 header {
-    display: flex;
+    display: fixed;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
@@ -304,7 +302,7 @@ header {
 
 
 header .header-nav ul {
-    display: flex;
+    display: fixed;
     list-style-type: none;
 }
 
