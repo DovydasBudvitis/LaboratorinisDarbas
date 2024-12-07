@@ -6,7 +6,7 @@
     <title>Styled Profile Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="startTime()">
     <header>
         <h1>Welcome to My Portfolio</h1>
         <p>Discover my projects, skills, and more.</p>
@@ -104,7 +104,123 @@
         </ul>
         <img src="Photos/download.png" alt="Description of Photo 1" width="300" height="170">
       </section>
-    </div>
+
+      <section class="Integralas">
+        <h2>MathML Objektas: Contour Integral</h2>
+        <p>Žemiau pateiktas kontūro integralas su funkcija \( f(z) \):</p>
+        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mi>f</mi>
+            <mo stretchy="false">(</mo>
+            <mi>a</mi>
+            <mo stretchy="false">)</mo>
+            <mo>=</mo>
+            <mfrac>
+                <mn>1</mn>
+                <mrow>
+                    <mn>2</mn>
+                    <mi>&pi;</mi>
+                    <mi>i</mi>
+                </mrow>
+            </mfrac>
+            <mo>&#x222E;</mo> <!-- Contour Integral -->
+            <mfrac>
+                <mrow>
+                    <mi>f</mi>
+                    <mo stretchy="false">(</mo>
+                    <mi>z</mi>
+                    <mo stretchy="false">)</mo>
+                </mrow>
+                <mrow>
+                    <mi>z</mi>
+                    <mo>&#x2212;</mo>
+                    <mi>a</mi>
+                </mrow>
+            </mfrac>
+            <mi>d</mi>
+            <mi>z</mi>
+        </math>    
+  </section>
+
+  <Section class="SVG">
+    <h2>SVG Paveikslėlis</h2>
+    <p>Šiame skyriuje pateikiamas SVG:</p>
+    <svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+        <!-- Circle -->
+        <circle cx="100" cy="100" r="50" fill="blue" />
+        <!-- Rectangle -->
+        <rect x="200" y="50" width="100" height="100" fill="green" />
+        <!-- Text -->
+        <text x="100" y="170" font-size="20" fill="yellow">SVG Pavyzdys</text>
+    </svg>
+  </Section>
+
+  <section>
+        <h2>JavaScript Clock</h2>
+
+        <div class="clock" id="txt"></div>
+
+    <script>
+            function startTime() {
+            const today = new Date();
+            let h = today.getHours();
+            let m = today.getMinutes();
+            let s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+        document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+        setTimeout(startTime, 1000);
+}
+
+    function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+}
+    </script>
+  </section>
+
+
+
+    <section>
+        <h2>Kontaktų forma</h2>
+            <form id="contactForm">
+                <label for="name">Vardas:</label><br>
+                <input type="text" id="name" name="name" placeholder="Your name.." required><br><br>
+
+                <label for="surname">Pavardė:</label><br>
+                <input type="text" id="surname" name="surname" placeholder="Your last name.." required><br><br>
+        
+                <label for="email">El. pašto adresas:</label><br>
+                <input type="email" id="email" name="email" placeholder="Your email address.." required><br><br>
+        
+                <label for="phone">Telefono numeris:</label><br>
+                <input type="tel" id="phone" name="phone" placeholder="Your phone number.." required><br><br>
+        
+                <label for="address">Adresas:</label><br>
+                <input type="text" id="address" name="address" placeholder="Your Address" required><br><br>
+
+            <h3>Įsivertinkite:</h3>
+                <label>Klausimas 1: Kaip dažnai naudojaties internetu?</label><br>
+                <input type="number" id="q1" name="q1" min="1" max="10" required><br><br>
+            
+                <label>Klausimas 2: Ar jums patinka HTML programavimo kalba?</label><br>
+                <input type="number" id="q2" name="q2" min="1" max="10" required><br><br>
+            
+                <label>Klausimas 3: Nuo 1 iki 10 kaip dažnai žiūrite filmus?</label><br>
+                <input type="number" id="q3" name="q3" min="1" max="10" required><br><br>
+            
+                <label>Klausimas 4: Kaip dažnai lankote paskaitas?</label><br>
+                <input type="number" id="q4" name="q4" min="1" max="10" required><br><br>
+            
+                <label>Klausimas 5: Nuo 1 iki 10 kaip dažnai valgote aštrų maistą?</label><br>
+                <input type="number" id="q5" name="q5" min="1" max="10" required><br><br>
+ 
+                <button type="button" onclick="saveData()">Išsaugoti</button>
+            </form>
+
+            <div class="result" id="result"></div>
+            <script src="script.js"></script>
+    </section>
+</div>
 
     <footer>
         <div class="contact-info" id="Contacts">

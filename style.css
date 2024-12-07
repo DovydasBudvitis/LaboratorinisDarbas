@@ -156,7 +156,7 @@ body {
 /* Main Grid Layout */
 .main-grid {
     display: grid;
-    grid-template-columns: repeat(12, 2fr); /* 12-column layout */
+    grid-template-columns: repeat(12, 3fr); /* 12-column layout */
     grid-gap: 20px;
     width: calc(100% - 0px); /* Make the grid the same width as the available space, accounting for sidebar */
     margin-left: 0px; /* Offset to account for sidebar */
@@ -172,7 +172,20 @@ body {
     padding: 20px;
     border-radius: 10px;
 }
-
+.Integralas {
+    grid-column: span 12; /* Full width */
+    text-align: center;
+    background-color: rgba(110, 9, 9, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+.SVG {
+    grid-column: span 12; /* Full width */
+    text-align: center;
+    background-color: rgba(247, 111, 111, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
 .Services {
     grid-column: span 6;
     background-color: rgba(0, 0, 0, 0.7);
@@ -354,4 +367,94 @@ footer .social-icons span {
 }
 HTML {
     scroll-behavior: smooth;
+}
+
+/* Bendras sekcijos stilius */
+section {
+    grid-column: span 12;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Antraštės stilius */
+section h2 {
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Formos stilius */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+form label {
+    font-size: 14px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="number"] {
+    width: 80%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid brown;
+    border-radius: 5px;
+    background-color: brown;
+    transition: border-color 0.3s ease;
+}
+/* Mygtuko stilius */
+form button {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #fff;
+    background-color: grey;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: lightgray;
+}
+
+/* Rezultatų skyriaus stilius */
+.result {
+    grid-column: 6;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Spalvotos vidurkio reikšmės stilius */
+.result .rating {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    display: inline-block;
+}
+
+.result .rating.red {
+    background-color: #ff4d4d;
+}
+
+.result .rating.orange {
+    background-color: #ffa500;
+}
+
+.result .rating.green {
+    background-color: #4caf50;
+}
+
+.clock {
+    text-align: center;
 }
